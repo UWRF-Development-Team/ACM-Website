@@ -1,0 +1,10 @@
+[
+  {
+    "title": "ACM Meeting",
+    "description": "Join us for club activities!",
+    "time": "5:00pm",
+    "recursion": {
+      "repeats_on": "w"
+    }
+  }
+]
