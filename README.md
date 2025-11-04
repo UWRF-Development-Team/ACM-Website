@@ -1,2 +1,1 @@
-# public_html
-a new website for acm
+Welcome to the UWRF ACM Webpage!
