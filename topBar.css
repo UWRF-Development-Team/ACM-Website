@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: blue;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+a {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: navy;
+    background-color: white;
+    margin-left: 2rem;
+}
+
+a:hover {
+    outline: 3px solid blue;
+    outline-offset: -3px;
+}
