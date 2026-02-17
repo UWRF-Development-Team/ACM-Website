@@ -5,12 +5,3 @@ body {
     background-size: cover; /* Stretches the image to cover the entire container */
     background-attachment: fixed; /* Keeps the image fixed in the viewport during scroll */
 }
-
-iframe {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: fit-content;
-    border: none;
-}
