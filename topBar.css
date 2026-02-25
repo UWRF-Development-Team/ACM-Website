@@ -17,10 +17,12 @@ a {
     display: flex;
     text-decoration: none;
     align-items: center;
+    justify-content: center;
     color: navy;
     background-color: white;
     margin-left: 2rem;
-    height: 2rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
 }
 
 a:hover {
