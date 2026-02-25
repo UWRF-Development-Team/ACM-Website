@@ -1,24 +1,50 @@
 header {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    background-color: blue;
+    background-color: cornflowerblue;
     margin: 0;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
+    height: var(--top-bar-height);
 }
 
 a {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
     text-decoration: none;
+    align-items: center;
+    justify-content: center;
     color: navy;
-    background-color: white;
+    background-color: aliceblue;
     margin-left: 2rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
 }
 
 a:hover {
-    outline: 3px solid blue;
-    outline-offset: -3px;
+    animation-name: transition-background;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes transition-background {
+    to {
+        background-color: white;
+        padding: 0.5rem 2.5rem;
+    }
+}
+
+a > img {
+    height: 100%;
+}
+
+a:has(img) {
+    margin-right: 2rem;
+    padding: 0.5rem;
 }

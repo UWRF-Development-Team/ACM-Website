@@ -1,8 +1,29 @@
+:root {
+    --top-bar-height: 4rem;
+}
+
+body {
+    font-family: sans-serif;
+}
+
 iframe {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    height: fit-content;
+    height: var(--top-bar-height);
     border: none;
+}
+
+div#content {
+    position: fixed;
+    height: calc(100vh - var(--top-bar-height));
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    width: 100%;
+}
+
+div#content * {
+    position: relative;
 }
