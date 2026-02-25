@@ -1,6 +1,7 @@
 header {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     background-color: blue;
     margin: 0;
@@ -13,10 +14,13 @@ header {
 
 a {
     padding: 0.5rem;
+    display: flex;
     text-decoration: none;
+    align-items: center;
     color: navy;
     background-color: white;
     margin-left: 2rem;
+    height: 2rem;
 }
 
 a:hover {
@@ -24,10 +28,6 @@ a:hover {
     outline-offset: -3px;
 }
 
-a:has(img) {
-    height: 100%;
-    padding: 0;
-}
 a > img {
     height: 100%;
 }
