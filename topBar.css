@@ -8,6 +8,7 @@ header {
     left: 0;
     top: 0;
     width: 100%;
+    height: 4rem;
 }
 
 a {
@@ -21,4 +22,12 @@ a {
 a:hover {
     outline: 3px solid blue;
     outline-offset: -3px;
+}
+
+a:has(img) {
+    height: 100%;
+    padding: 0;
+}
+a > img {
+    height: 100%;
 }
