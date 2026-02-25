@@ -13,7 +13,7 @@ header {
 }
 
 a {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     display: flex;
     text-decoration: none;
     align-items: center;
@@ -29,16 +29,22 @@ a {
 
 a:hover {
     animation-name: transition-background;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
 @keyframes transition-background {
     to {
         background-color: white;
+        padding: 0.5rem 2.5rem;
     }
 }
 
 a > img {
     height: 100%;
+}
+
+a:has(img) {
+    margin-right: 2rem;
+    padding: 0.5rem;
 }
