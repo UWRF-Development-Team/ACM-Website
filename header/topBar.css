@@ -3,7 +3,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: cornflowerblue;
+    background-color: var(--accent-color);
     margin: 0;
     position: absolute;
     left: 0;
@@ -18,8 +18,8 @@ a {
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    color: navy;
-    background-color: aliceblue;
+    color: var(--subaccent-color);
+    background-color: var(--body-color);
     margin-left: 2rem;
     height: 2.5rem;
     min-width: 2.5rem;
@@ -35,7 +35,7 @@ a:hover {
 
 @keyframes transition-background {
     to {
-        background-color: white;
+        background-color: var(--body-color);
         padding: 0.5rem 2.5rem;
     }
 }
