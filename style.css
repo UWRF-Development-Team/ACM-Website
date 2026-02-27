@@ -1,8 +1,9 @@
 :root {
     --top-bar-height: 4rem;
     --body-color: white;
-    --accent-color: #D31145;
-    --subaccent-color: #231F20;
+    --accent-color: #be0f34;
+    --subaccent-color: black;
+    --extra-color: #62c2f3;
 }
 
 body {
