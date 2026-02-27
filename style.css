@@ -1,5 +1,8 @@
 :root {
     --top-bar-height: 4rem;
+    --body-color: white;
+    --accent-color: #D31145;
+    --subaccent-color: #231F20;
 }
 
 body {
@@ -22,6 +25,7 @@ div#content {
     bottom: 0;
     overflow: auto;
     width: 100%;
+    margin: 0 0.5rem;
 }
 
 div#content * {
