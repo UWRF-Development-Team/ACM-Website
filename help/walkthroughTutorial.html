@@ -6,18 +6,21 @@
     <meta name="description" content="UWRF ACM help page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="walkthrough.css">
 </head>
 <body>
     <iframe src="../header/topBar.html"></iframe>
     <div id="content">
         <h1>Accessing UWRF Tutoring Services</h1>
-        <ol>
+        <ol id="mainList">
             <li>
                 Visit <a href="https://students.uwrf.edu/studentsuccess/tutoring-services">https://students.uwrf.edu/studentsuccess/tutoring-services</a>
             </li>
             <li>
                 Click the “Schedule an Appointment” button
-                <img src="assets/schedule.png" alt="A cursor clicking on a 'schedule appointment' button.">
+                <div id="blockTime">
+                    <img src="assets/schedule.png" alt="A cursor clicking on a 'schedule appointment' button.">
+                </div>
             </li>
             <li>
                 Locate the widget to make an appointment
@@ -26,8 +29,10 @@
                         Find yourself in the “For Student” dropdown, pick the appropriate class, and pick a reason
                     </li>
                 </ol>
-                <img src="assets/schedule_appt1.png" alt="A view of an unfilled scheduling form.">
-                <img src="assets/schedule_appt2.png" alt="A view of a filled scheduling form.">
+                <section>
+                    <img src="assets/schedule_appt1.png" alt="A view of an unfilled scheduling form.">
+                    <img id="goodSchedule" src="assets/schedule_appt2.png" alt="A view of a filled scheduling form.">
+                </section>
             </li>
             <li>
                 Click the search button, and click on any available appointments<br>
