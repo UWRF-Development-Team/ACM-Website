@@ -1,0 +1,9 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/uwrfhosting/public_html/
+    - /bin/cp -R dev $DEPLOYPATH
+    - /bin/cp -R door $DEPLOYPATH
+    - /bin/cp -R header $DEPLOYPATH
+    - /bin/cp -R home $DEPLOYPATH
+    - /bin/cp -R media $DEPLOYPATH
+    # naive approach copying each folder manually because im bad at bash
