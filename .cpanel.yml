@@ -6,4 +6,5 @@ deployment:
     - /bin/cp -R header $DEPLOYPATH
     - /bin/cp -R home $DEPLOYPATH
     - /bin/cp -R media $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
     # naive approach copying each folder manually because im bad at bash
