@@ -35,7 +35,7 @@ footer {
     border-radius: 20px;
     padding: 5px;
     margin: 10px;
-    width: 50%;
-    align-items:center;
-    flex:auto;
+    align-items: center;
+    display: flex;
+    width: fit-content;
 }
