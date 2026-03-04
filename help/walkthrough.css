@@ -1,0 +1,16 @@
+img {
+    width: 30rem;
+    border: lightgrey solid 0.2rem;
+}
+
+li, #blockTime {
+    margin: 1rem 0;
+}
+
+#goodSchedule {
+    border: green solid 0.25rem;
+}
+
+#mainList > li:nth-child(3) > section > img:first-child {
+    margin-right: 1rem;
+}
