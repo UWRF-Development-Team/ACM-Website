@@ -1,5 +1,5 @@
 ---
 deployment:
-  tasks:
-    - export DEPLOYPATH=/home/uwrfhosting/public_html/
-    - /bin/cp -R ./ $DEPLOYPATH
+ tasks:
+  - export DEPLOYPATH=/home/uwrfhosting/public_html/
+  - /bin/cp -R ./ $DEPLOYPATH
