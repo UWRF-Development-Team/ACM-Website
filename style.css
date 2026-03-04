@@ -21,13 +21,21 @@ body {
     color: var(--subaccent-color, black);
 }
 
+iframe {
+    border: none;
+}
+
 #header {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: var(--top-bar-height);
-    border: none;
+}
+
+#footer {
+    width: 100%;
+    height: 12rem;
 }
 
 div#content {
