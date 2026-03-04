@@ -10,6 +10,7 @@ header {
     top: 0;
     width: 100%;
     height: var(--top-bar-height);
+    font-family: Calibri, sans-serif;
 }
 
 a {
