@@ -43,3 +43,15 @@ div#content {
 div#content * {
     position: relative;
 }
+
+footer {
+    background-color: aqua;
+    color: black;
+    border: 5px solid green;  
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px;
+    align-items: center;
+    display: flex;
+    width: fit-content;
+}
