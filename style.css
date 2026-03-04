@@ -21,7 +21,7 @@ body {
     color: var(--subaccent-color, black);
 }
 
-iframe {
+#header {
     position: fixed;
     left: 0;
     top: 0;
