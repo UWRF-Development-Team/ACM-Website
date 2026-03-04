@@ -1,9 +1,24 @@
 :root {
     --top-bar-height: 4rem;
+    --body-color: white;
+    --accent-color: #be0f34;
+    --subaccent-color: black;
+    --extra-color: #62c2f3;
+}
+
+@font-face {
+    font-family: 'Amarna';
+    src: url('/media/Amarna-Regular.woff2') format('woff2');
+    url('/media/Amarna-Italic.woff2') format('woff2');
+    url('/media/Amarna-Light.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Amarna', sans-serif;
+    color: var(--subaccent-color, black);
 }
 
 iframe {
@@ -22,6 +37,7 @@ div#content {
     bottom: 0;
     overflow: auto;
     width: 100%;
+    margin: 0 0.5rem;
 }
 
 div#content * {
@@ -29,13 +45,20 @@ div#content * {
 }
 
 footer {
-    background-color: aqua;
-    color: black;
-    border: 5px solid green;  
+    background-color: var(--subaccent-color);
+    color: var(--body-color);
     border-radius: 20px;
     padding: 5px;
     margin: 10px;
     align-items: center;
     display: flex;
     width: fit-content;
+}
+
+footer a:any-link {
+    color: var(--body-color);
+}
+
+footer a:hover {
+    color: var(--extra-color);
 }
