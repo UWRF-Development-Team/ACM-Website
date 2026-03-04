@@ -47,7 +47,6 @@ div#content * {
 footer {
     background-color: var(--subaccent-color);
     color: var(--body-color);
-    /*border: 5px solid green;  */
     border-radius: 20px;
     padding: 5px;
     margin: 10px;
