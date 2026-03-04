@@ -6,8 +6,18 @@
     --extra-color: #62c2f3;
 }
 
+@font-face {
+    font-family: 'Amarna';
+    src: url('/media/Amarna-Regular.woff2') format('woff2');
+    url('/media/Amarna-Italic.woff2') format('woff2');
+    url('/media/Amarna-Light.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Amarna', sans-serif;
     color: var(--subaccent-color, black);
 }
 
