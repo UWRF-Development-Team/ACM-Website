@@ -45,13 +45,21 @@ div#content * {
 }
 
 footer {
-    background-color: aqua;
-    color: black;
-    border: 5px solid green;  
+    background-color: var(--subaccent-color);
+    color: var(--body-color);
+    /*border: 5px solid green;  */
     border-radius: 20px;
     padding: 5px;
     margin: 10px;
     align-items: center;
     display: flex;
     width: fit-content;
+}
+
+footer a:any-link {
+    color: var(--body-color);
+}
+
+footer a:hover {
+    color: var(--extra-color);
 }
