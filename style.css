@@ -38,8 +38,29 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/media/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/media/Montserrat-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/media/Montserrat-Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
 body {
-    font-family: 'Amarna', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--subaccent-color, black);
 }
 
