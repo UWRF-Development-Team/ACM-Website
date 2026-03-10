@@ -2,11 +2,9 @@ footer {
     background-color: var(--subaccent-color);
     color: var(--body-color);
     border-radius: 20px;
-    padding: 5px;
-    margin: 10px;
     align-items: center;
     display: flex;
-    width: fit-content;
+    width: 99%;
     height: 10rem;
 }
 
