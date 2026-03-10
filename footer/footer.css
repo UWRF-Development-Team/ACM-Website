@@ -6,6 +6,7 @@ footer {
     display: flex;
     width: 99%;
     height: 10rem;
+    padding: 0.5rem;
 }
 
 footer a:any-link {
