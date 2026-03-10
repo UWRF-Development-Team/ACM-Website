@@ -12,12 +12,21 @@ body {
 }
 
 iframe {
+    border: none;
+}
+
+#header {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: var(--top-bar-height);
-    border: none;
+}
+
+#footer {
+    width: 100%;
+    height: 12rem;
+    margin: 0 -0.5rem;
 }
 
 div#content {
@@ -32,23 +41,4 @@ div#content {
 
 div#content * {
     position: relative;
-}
-
-footer {
-    background-color: var(--subaccent-color);
-    color: var(--body-color);
-    border-radius: 20px;
-    padding: 5px;
-    margin: 10px;
-    align-items: center;
-    display: flex;
-    width: fit-content;
-}
-
-footer a:any-link {
-    color: var(--body-color);
-}
-
-footer a:hover {
-    color: var(--extra-color);
 }
