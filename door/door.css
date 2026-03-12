@@ -1,5 +1,20 @@
-img {
+img:not(header > img) {
     width: 15rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header img {
+    width: 7rem;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
 }
 
 #info, #qrs {
@@ -13,18 +28,19 @@ img {
 
 #info div {
     background-color: #eeeeee;
+    flex: 1;
 }
 
-/*#info div *:not(h3) {*/
-/*    padding: 0 0.5rem;*/
-/*}*/
+#info div *:not(h3) {
+    padding: 0 1rem;
+}
 
 #info h3 {
     color: var(--body-color);
     background-color: var(--accent-color);
     padding: 0.5rem 0;
-    margin-top: -0.5rem; /* todo bad */
     text-align: center;
+    margin-top: 0;
 }
 
 section {
