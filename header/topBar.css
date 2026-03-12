@@ -1,16 +1,37 @@
+#headerBg {
+    background-color: var(--body-color);
+}
+
+#logo {
+    height: 6rem;
+}
+
+#headersHeader {
+    position: absolute;
+    height: 6rem;
+    top: 0.5rem;
+    left: 1rem;
+    width: 50%;
+}
+
+#headersHeader h2 {
+    position: absolute;
+    top: 0;
+    left: 6.5rem;
+}
+
 header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--accent-color);
     margin: 0;
+    background-color: var(--accent-color);
     position: absolute;
     left: 0;
-    top: 0;
+    top: 7rem;
     width: 100%;
     height: var(--top-bar-height);
-    font-family: Calibri, sans-serif;
 }
 
 a {

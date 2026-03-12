@@ -1,0 +1,19 @@
+footer {
+    background-color: var(--subaccent-color);
+    color: var(--body-color);
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    width: 64rem;
+    height: 10rem;
+    padding: 0.5rem 1.5rem;
+    margin: auto;
+}
+
+footer a:any-link {
+    color: var(--body-color);
+}
+
+footer a:hover {
+    color: var(--extra-color);
+}

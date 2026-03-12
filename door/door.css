@@ -1,7 +1,50 @@
-/* In your CSS file (styles.css) */
-body {
-    /*background-image: url("put_background_here.png");*/
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-size: cover; /* Stretches the image to cover the entire container */
-    background-attachment: fixed; /* Keeps the image fixed in the viewport during scroll */
+img:not(header > img) {
+    width: 15rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header img {
+    width: 7rem;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+#info, #qrs {
+    display: flex;
+    justify-content: space-around;
+}
+
+#info {
+    gap: 1rem;
+}
+
+#info div {
+    background-color: #eeeeee;
+    flex: 1;
+}
+
+#info div *:not(h3) {
+    padding: 0 1rem;
+}
+
+#info h3 {
+    color: var(--body-color);
+    background-color: var(--accent-color);
+    padding: 0.5rem 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
