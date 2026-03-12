@@ -27,7 +27,8 @@ header h1 {
 }
 
 #info div {
-    background-color: #eeeeee;
+    background-color: #d8d8d8;
+    border: 1px solid #b9b9b9;
     flex: 1;
 }
 
