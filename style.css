@@ -1,7 +1,7 @@
 :root {
     --top-bar-height: 4rem;
     --total-header-height: 11rem;
-    --page-width: 70rem;
+    --page-width: 60vw;
     --body-color: white;
     --accent-color: #be0f34;
     --subaccent-color: black;
@@ -22,8 +22,16 @@ body {
 
 main {
     max-width: var(--page-width);
+    min-width: 70rem;
     margin: 0 auto;
     background-color: var(--body-color);
+}
+
+@media screen and (max-width: 70rem) {
+    main {
+        max-width: 100%;
+        min-width: 100%;
+    }
 }
 
 iframe {
