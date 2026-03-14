@@ -18,6 +18,7 @@
     position: absolute;
     top: 0;
     left: 6.5rem;
+    color: var(--subaccent-color)
 }
 
 header {
