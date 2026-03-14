@@ -8,6 +8,10 @@
     --extra-color: #62c2f3;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-color);
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--subaccent-color, black);
@@ -24,10 +28,6 @@ main {
 
 iframe {
     border: none;
-}
-
-#content h1, #content h2, #content h3 {
-    color: var(--accent-color);
 }
 
 #header {
