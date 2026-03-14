@@ -1,0 +1,22 @@
+p {
+    background-color: black;
+    width: fit-content;
+}
+
+a {
+    color: black;
+}
+
+p:hover {
+    animation-name: fade-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+    from {}
+    to {
+        background-color: transparent;
+        color: revert;
+    }
+}
