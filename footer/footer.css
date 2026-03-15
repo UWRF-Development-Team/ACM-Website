@@ -14,6 +14,10 @@ main {
     max-width: none !important;
 }
 
+#email a {
+    text-decoration: none;
+}
+
 footer a:any-link {
     color: var(--body-color);
 }
