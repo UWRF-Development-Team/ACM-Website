@@ -1,11 +1,15 @@
 :root {
     --top-bar-height: 4rem;
     --total-header-height: 11rem;
-    --page-width: 70rem;
+    --page-width: 60vw;
     --body-color: white;
     --accent-color: #be0f34;
     --subaccent-color: black;
     --extra-color: #62c2f3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-color);
 }
 
 body {
@@ -18,16 +22,20 @@ body {
 
 main {
     max-width: var(--page-width);
+    min-width: 70rem;
     margin: 0 auto;
     background-color: var(--body-color);
 }
 
-iframe {
-    border: none;
+@media screen and (max-width: 70rem) {
+    main {
+        max-width: 100%;
+        min-width: 100%;
+    }
 }
 
-#content h1, #content h2, #content h3 {
-    color: var(--accent-color);
+iframe {
+    border: none;
 }
 
 #header {
