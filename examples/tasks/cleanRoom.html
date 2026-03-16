@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Cleaning</title>
+    <meta name="description" content="Java code example for cleaning your room.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tasks.css">
+</head>
+<body>
+    <code>
+import java.util.Random;
+
+public class CleanRoom {
+    private String[] areas = {
+        "Floor",
+        "Desks",
+        "Couches",
+        "Cabinets",
+        "Countertops"
+    };
+    private boolean[] areaIsClean = new boolean[areas.length];
+    private int areasRemaining = areas.length;
+
+    CleanRoom(){
+        System.out.println("Starting to clean the room");
+        for(int i = 0; i < areaIsClean.length; i++){
+            areaIsClean[i] = false;
+        }
+    }
+
+    void CleanArea(int x){
+        if(x > 0 && x < areas.length && areasRemaining > 0){
+            startCleaning();
+            areaIsClean[x] = true;
+            areasRemaining--;
+            System.out.println(areas[x] + " has been cleaned!"); //Add a check to see if area was already cleaned!
+            System.out.println(areasRemaining + " areas have yet to be cleaned!");
+        }
+    }
+
+    void startCleaning(){
+        int objectCount = new Random().nextInt(40);
+        System.out.println(objectCount + " amount of objects need to be picked up.");
+        for(int i = 0; i < objectCount; i++){
+            System.out.println("Object " + i + " being picked up.");
+        }
+    }
+}
+    </code>
+</body>
+</html>
