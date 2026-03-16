@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make a Sandwich</title>
+    <meta name="description" content="Code example for a Java Sandwich application.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tasks.css">
+</head>
+<body>
+    <code>
+public class Sandwich {
+    private String[] typeName = {
+        "Peanut butter and jelly",
+        "Meat and cheese",
+        "Tuna sandwich",
+        "Egg sandwich"
+    };
+    private String[][] fillingName = {
+        {"Peanut butter", "Jelly"},
+        {"Meat", "Cheese"},
+        {"Tuna", "Mayo"},
+        {"Egg", "Bacon"}
+    };
+    private boolean hasBread;
+    private boolean hasFilling;
+    private boolean hasSecondFilling;
+
+    private int type;
+
+    Sandwich(){
+        type = -1;
+        hasBread = false;
+        hasFilling = false;
+        hasSecondFilling = false;
+    }
+
+    Sandwich(int x){
+        type = x;
+        hasBread = false;
+        hasFilling = false;
+        hasSecondFilling = false;
+    }
+
+    void GetBread(){
+        hasBread = true;
+        System.out.println("Bread Aqcuired.");
+    }
+
+    void GetFilling(){
+        if(hasFilling){
+            hasSecondFilling = true;
+        } else {
+            hasFilling = true;
+        }
+        System.out.println("One of the fillings has been aquired");
+
+        //System to print the filling name
+    }
+
+    String SandwichType(){
+        System.out.println("Data aqcuired.");
+        return typeName[type];
+    }
+
+    void setSandwichType(int i){
+        if(i > 0 && i < 3){
+            type = i;
+        } else {
+            System.out.println("I don't know that sandwich!");
+        }
+    }
+
+    void eatSandwich(){
+        if(hasBread && hasFilling && hasSecondFilling && type != -1){
+            System.out.println("Sandwich eaten!");
+        } else {
+            System.out.println("No sandwich is ready!");
+        }
+    }
+}
+    </code>
+</body>
+</html>
