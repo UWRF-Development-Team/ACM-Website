@@ -1,8 +1,16 @@
 code {
+    display: block;
+    overflow: scroll;
     white-space: pre;
+    margin: 0 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #eee;
+    font-family: 'DM Mono';
+    font-size: 0.9em;
 }
 
-p {
+.spoiler {
     background-color: black;
     width: fit-content;
 }
@@ -11,7 +19,7 @@ a {
     color: black;
 }
 
-p:hover {
+.spoiler:hover {
     animation-name: fade-out;
     animation-duration: 1s;
     animation-fill-mode: forwards;
