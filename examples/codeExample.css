@@ -1,13 +1,22 @@
 code {
     display: block;
-    overflow: scroll;
+    position: relative;
+    overflow: auto;
     white-space: pre;
     margin: 0 1rem;
     padding: 1rem;
     border-radius: 20px;
     background-color: #eee;
-    font-family: 'DM Mono';
+    font-family: 'DM Mono', monospace;
     font-size: 0.9em;
+}
+
+code img {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
 }
 
 .spoiler {
@@ -30,5 +39,16 @@ a {
     to {
         background-color: transparent;
         color: revert;
+    }
+}
+
+.bouncy {
+    animation-name: bounce;
+    animation-duration: 0.15s;
+}
+
+@keyframes bounce {
+    50% {
+        transform: scale(0.8);
     }
 }
