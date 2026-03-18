@@ -1,0 +1,20 @@
+button[onclick="openTabs()"] {
+    transform: scale(500%);
+}
+
+iframe {
+    height: 50rem;
+    width: 50rem;
+}
+
+header {
+    opacity: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+* {
+    overflow: auto;
+    border: 3px pink dashed;
+}

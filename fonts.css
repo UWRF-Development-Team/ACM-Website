@@ -50,3 +50,10 @@
     font-weight: normal;
     font-style: italic;
 }
+
+@font-face {
+    font-family: 'DM Mono';
+    src: url('media/DMMono-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
