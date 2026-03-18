@@ -3,7 +3,7 @@ code {
     position: relative;
     overflow: auto;
     white-space: pre;
-    margin: 0 1rem;
+    margin: 1rem;
     padding: 1rem;
     border-radius: 20px;
     background-color: #eee;
