@@ -5,11 +5,23 @@ function loadingBars(startingPoint) {
             iframes[i].parentElement.querySelector(".loading").remove();
             iframes[i].classList.remove("hidden");
         });
-        const loadingDiv = document.createElement("div");
-        loadingDiv.classList.add("loading");
-        loadingDiv.style.width = iframes[i].offsetWidth + "px";
-        loadingDiv.style.height = iframes[i].offsetHeight + "px"
-        iframes[i].before(loadingDiv);
-        iframes[i].classList.add("hidden");
+        createLoadingDiv(iframes[i]);
     }
+}
+
+function loadOne(element) {
+    element.addEventListener("load", () => {
+        element.parentElement.querySelector(".loading").remove();
+        element.classList.remove("hidden");
+    });
+    createLoadingDiv(element);
+}
+
+function createLoadingDiv(element) {
+    const loadingDiv = document.createElement("div");
+    loadingDiv.classList.add("loading");
+    loadingDiv.style.width = element.offsetWidth + "px";
+    loadingDiv.style.height = element.offsetHeight + "px"
+    element.before(loadingDiv);
+    element.classList.add("hidden");
 }
