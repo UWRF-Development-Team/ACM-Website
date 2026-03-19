@@ -59,3 +59,11 @@ div#content {
     overflow: auto;
     margin: 0 1.5rem;
 }
+
+.hidden {
+    display: none;
+}
+
+.loading {
+    background-color: gray;
+}
