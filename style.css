@@ -17,7 +17,10 @@ body {
     color: var(--subaccent-color, black);
     background-color: #d3d3dc;
     margin: 0;
-    
+}
+
+li {
+    margin: 0.5rem 0;
 }
 
 main {
