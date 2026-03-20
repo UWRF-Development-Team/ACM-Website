@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make a Sandwich - UWRF ACM</title>
+    <meta name="description" content="A Java code example for an application to make a sandwich.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- OPEN GRAPH EMBED META TAGS (SEE: https://ogp.me/) -->
+    <meta property="og:title" content="Make a Sandwich - UWRF ACM"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://uwrf.acm.org/examples/tasks/sandwich.html"/>
+    <meta property="og:image" content="https://uwrf.acm.org/media/ACM-UWRF.png"/>
+    <meta property="og:description" content="A Java code example for an application to make a sandwich."/>
+    <meta name="theme-color" content="#be0f34">
+    <!-- END -->
+    <link rel="stylesheet" href="../codeExample.css">
+    <link rel="stylesheet" href="../../fonts.css">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../codeExample.js"></script>
+</head>
+<body>
+    <main>
+        <iframe id="header" src="../../header/topBar.html"></iframe>
+        <div id="content">
+            <code>
+                <img src="../../media/copy.svg" alt="copy icon">
+public class Sandwich {
+    private String[] typeName = {
+        "Peanut butter and jelly",
+        "Meat and cheese",
+        "Tuna sandwich",
+        "Egg sandwich"
+    };
+    private String[][] fillingName = {
+        {"Peanut butter", "Jelly"},
+        {"Meat", "Cheese"},
+        {"Tuna", "Mayo"},
+        {"Egg", "Bacon"}
+    };
+    private boolean hasBread;
+    private boolean hasFilling;
+    private boolean hasSecondFilling;
+
+    private int type;
+
+    Sandwich(){
+        type = -1;
+        hasBread = false;
+        hasFilling = false;
+        hasSecondFilling = false;
+    }
+
+    Sandwich(int x){
+        type = x;
+        hasBread = false;
+        hasFilling = false;
+        hasSecondFilling = false;
+    }
+
+    void GetBread(){
+        hasBread = true;
+        System.out.println("Bread Aqcuired.");
+    }
+
+    void GetFilling(){
+        if(hasFilling){
+            hasSecondFilling = true;
+        } else {
+            hasFilling = true;
+        }
+        System.out.println("One of the fillings has been aquired");
+
+        //System to print the filling name
+    }
+
+    String SandwichType(){
+        System.out.println("Data aqcuired.");
+        return typeName[type];
+    }
+
+    void setSandwichType(int i){
+        if(i > 0 && i < 3){
+            type = i;
+        } else {
+            System.out.println("I don't know that sandwich!");
+        }
+    }
+
+    void eatSandwich(){
+        if(hasBread && hasFilling && hasSecondFilling && type != -1){
+            System.out.println("Sandwich eaten!");
+        } else {
+            System.out.println("No sandwich is ready!");
+        }
+    }
+}
+            </code>
+        </div>
+    </main>
+</body>
+</html>
