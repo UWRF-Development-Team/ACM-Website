@@ -17,7 +17,10 @@ body {
     color: var(--subaccent-color, black);
     background-color: #d3d3dc;
     margin: 0;
-    
+}
+
+li {
+    margin: 0.5rem 0;
 }
 
 main {
@@ -58,6 +61,10 @@ div#content {
     bottom: 0;
     overflow: auto;
     margin: 0 1.5rem;
+}
+
+div#content span {
+    font-weight: bold;
 }
 
 .hidden {
