@@ -82,11 +82,6 @@ a:hover {
     }
 }
 
-a > img {
-    height: 100%;
-}
-
-a:has(img) {
+a:last-child {
     margin-right: 2rem;
-    padding: 0.5rem;
 }
