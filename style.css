@@ -30,10 +30,10 @@ main {
     background-color: var(--body-color);
 }
 
-@media screen and (max-width: 70rem) {
+@media screen and (max-width: 69rem) {
     main {
-        max-width: 100%;
-        min-width: 100%;
+        max-width: 100% !important;
+        min-width: 100% !important;
     }
 }
 
