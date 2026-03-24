@@ -21,6 +21,26 @@
     color: var(--subaccent-color);
 }
 
+@media screen and (max-width: 69rem) {
+    header {
+        max-width: 100% !important;
+        min-width: 100% !important;
+        /* justify-content: center !important; */
+    }
+    #headersHeader h2 {
+        font-size: large !important;
+        top: 0.75rem !important;
+    }
+    a {
+        margin-left: 1rem !important; 
+        min-width: 4rem !important;
+        padding: 0.5rem !important;
+    }
+    a:hover {
+        animation: none;
+    }
+}
+
 header {
     display: flex;
     flex-direction: row;
