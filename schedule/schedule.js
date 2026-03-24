@@ -11,7 +11,13 @@ getCalendarRSS().then(xml => {
     const parser = new DOMParser();
     const doc = parser.parseFromString(xml, "text/xml");
     const events = doc.querySelectorAll("item");
-    const embeddedHTML = events[0].querySelector("description").childNodes[0].data;
-    document.querySelector("#content div").innerHTML = embeddedHTML;
+    console.log(events);
+    events.forEach(event => {
+        const embeddedHTML = event.querySelector("description").childNodes[0].data;
+        const list = document.querySelector("#content ul");
+        const listElement = document.createElement("li");
+        listElement.innerHTML = embeddedHTML;
+        list.append(listElement);
+    })
 })
 
