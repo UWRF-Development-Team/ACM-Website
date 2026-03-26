@@ -1,4 +1,4 @@
-let calendarData ="wow";
+let calendarData;
 
 
 async function getCalendarRSS() {
@@ -17,6 +17,10 @@ getCalendarRSS().then(xml => {
         const list = document.querySelector("#content ul");
         const listElement = document.createElement("li");
         listElement.innerHTML = embeddedHTML;
+        const titleElement = listElement.querySelector(".summary");
+        titleElement.innerHTML = `<h1>${titleElement.innerHTML}</h1>`;
+        const timeDiv = listElement.querySelector("div:has( > p > time)");
+        timeDiv.classList.add("timeLocation");
         list.append(listElement);
     })
 })
