@@ -16,6 +16,21 @@ getCalendarRSS().then(xml => {
         const embeddedHTML = event.querySelector("description").childNodes[0].textContent;
         const events = document.querySelector(".events");
         const eventElement = document.createElement("div");
+        eventElement.addEventListener("scroll", () => {
+            if (eventElement.clientHeight + eventElement.scrollTop >= eventElement.scrollHeight - 1) {
+                eventElement.classList.remove("bothShadow");
+                eventElement.classList.remove("bottomShadow");
+                eventElement.classList.add("topShadow");
+            } else if (eventElement.scrollTop < 1) {
+                eventElement.classList.remove("bothShadow");
+                eventElement.classList.remove("topShadow");
+                eventElement.classList.add("bottomShadow");
+            } else {
+                eventElement.classList.add("bothShadow");
+                eventElement.classList.remove("topShadow");
+                eventElement.classList.remove("bottomShadow");
+            }
+        });
         eventElement.innerHTML = embeddedHTML;
         const titleElement = eventElement.querySelector(".summary");
         titleElement.innerHTML = `<h3>${titleElement.innerHTML}</h3>`;
