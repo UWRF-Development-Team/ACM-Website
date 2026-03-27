@@ -21,7 +21,12 @@ getCalendarRSS().then(xml => {
         titleElement.innerHTML = `<h1>${titleElement.innerHTML}</h1>`;
         const timeDiv = listElement.querySelector("div:has( > p > time)");
         timeDiv.classList.add("timeLocation");
+
+        timeDiv.querySelectorAll("time").forEach(element => {
+            const date = new Date(element.dateTime);
+            element.innerHTML = `${date.toLocaleString('default', {month: 'long'})} ${date.getDay()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`
+        })
+
         list.append(listElement);
     })
 })
-
