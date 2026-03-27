@@ -34,6 +34,7 @@ getCalendarRSS().then(xml => {
         outlinkIcon.alt = "A icon representing an external link.";
         anchor.append(outlinkIcon);
         anchor.href = outlink;
+        anchor.target = "_blank";
         anchor.classList.add("externalLink");
         timeDiv.append(anchor);
 
