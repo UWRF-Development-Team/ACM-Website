@@ -16,10 +16,17 @@ h3 {
 .events > div {
     width: 30rem;
     height: 30rem;
-    background-color: lightgray;
-    border: 3px solid gray;
+    background-color: #d3d3dc;
+    border: 3px solid var(--accent-color);
+    border-radius: 1rem;
     padding: 0.5rem;
     overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.events > div::-webkit-scrollbar {
+    display: none;
 }
 
 .externalLink img {
