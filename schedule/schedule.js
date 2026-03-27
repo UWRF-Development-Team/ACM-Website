@@ -16,21 +16,7 @@ getCalendarRSS().then(xml => {
         const embeddedHTML = event.querySelector("description").childNodes[0].textContent;
         const events = document.querySelector(".events");
         const eventElement = document.createElement("div");
-        eventElement.addEventListener("scroll", () => {
-            if (eventElement.clientHeight + eventElement.scrollTop >= eventElement.scrollHeight - 1) {
-                eventElement.classList.remove("bothShadow");
-                eventElement.classList.remove("bottomShadow");
-                eventElement.classList.add("topShadow");
-            } else if (eventElement.scrollTop < 1) {
-                eventElement.classList.remove("bothShadow");
-                eventElement.classList.remove("topShadow");
-                eventElement.classList.add("bottomShadow");
-            } else {
-                eventElement.classList.add("bothShadow");
-                eventElement.classList.remove("topShadow");
-                eventElement.classList.remove("bottomShadow");
-            }
-        });
+        eventElement.addEventListener("scroll", () => addShadows(eventElement));
         eventElement.innerHTML = embeddedHTML;
         const titleElement = eventElement.querySelector(".summary");
         titleElement.innerHTML = `<h3>${titleElement.innerHTML}</h3>`;
@@ -50,6 +36,7 @@ getCalendarRSS().then(xml => {
         eventElement.append(createOutlinkButton(outlink));
 
         events.append(eventElement);
+        addShadows(eventElement);
 
         if (events.childElementCount === 0)
             events.append(document.createElement("p").innerText = "Oh no! There's no events! :(");
@@ -73,4 +60,20 @@ function createOutlinkButton(outlink) {
     anchor.target = "_blank";
     anchor.classList.add("externalLink");
     return anchor;
+}
+
+function addShadows(element) {
+    if (element.clientHeight + element.scrollTop >= element.scrollHeight - 1) {
+        element.classList.remove("bothShadow");
+        element.classList.remove("bottomShadow");
+        element.classList.add("topShadow");
+    } else if (element.scrollTop < 1) {
+        element.classList.remove("bothShadow");
+        element.classList.remove("topShadow");
+        element.classList.add("bottomShadow");
+    } else {
+        element.classList.add("bothShadow");
+        element.classList.remove("topShadow");
+        element.classList.remove("bottomShadow");
+    }
 }
