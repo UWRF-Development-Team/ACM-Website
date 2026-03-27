@@ -13,8 +13,9 @@ getCalendarRSS().then(xml => {
     const events = doc.querySelectorAll("item");
     console.log(events);
     events.forEach(event => {
-        const embeddedHTML = event.querySelector("description").childNodes[0].data;
-        const list = document.querySelector(".events");
+        const outlink = event.querySelector("link").childNodes[0].textContent;
+        const embeddedHTML = event.querySelector("description").childNodes[0].textContent;
+        const events = document.querySelector(".events");
         const eventElement = document.createElement("div");
         eventElement.innerHTML = embeddedHTML;
         const titleElement = eventElement.querySelector(".summary");
@@ -27,6 +28,15 @@ getCalendarRSS().then(xml => {
             element.innerHTML = `${date.toLocaleString('default', {month: 'long'})} ${date.getDay()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`
         })
 
-        list.append(eventElement);
+        const anchor = document.createElement("a");
+        const outlinkIcon = document.createElement("img");
+        outlinkIcon.src = "../media/external-link.svg"; // There's probably a better way to do this
+        outlinkIcon.alt = "A icon representing an external link.";
+        anchor.append(outlinkIcon);
+        anchor.href = outlink;
+        anchor.classList.add("externalLink");
+        timeDiv.append(anchor);
+
+        events.append(eventElement);
     })
 })

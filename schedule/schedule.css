@@ -2,17 +2,26 @@
     text-decoration: underline;
 }
 
+h3 {
+    margin: 0;
+}
+
 .events {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     gap: 1rem;
+    justify-content: space-between;
 }
 
 .events > div {
-    width: 20rem;
-    height: 20rem;
+    width: 30rem;
+    height: 30rem;
     background-color: lightgray;
     border: 3px solid gray;
     padding: 0.5rem;
     overflow: auto;
+}
+
+.externalLink img {
+    width: 1.3rem;
 }
