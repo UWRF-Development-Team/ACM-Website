@@ -20,6 +20,7 @@ getCalendarRSS().then(xml => {
         eventElement.innerHTML = embeddedHTML;
         const titleElement = eventElement.querySelector(".summary");
         titleElement.innerHTML = `<h3>${titleElement.innerHTML}</h3>`;
+
         const timeDiv = eventElement.querySelector("div:has( > p > time)");
         timeDiv.classList.add("timeLocation");
 
@@ -28,15 +29,7 @@ getCalendarRSS().then(xml => {
             element.innerHTML = `${date.toLocaleString('default', {month: 'long'})} ${date.getDay()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`
         })
 
-        const anchor = document.createElement("a");
-        const outlinkIcon = document.createElement("img");
-        outlinkIcon.src = "../media/external-link.svg"; // There's probably a better way to do this
-        outlinkIcon.alt = "A icon representing an external link.";
-        anchor.append(outlinkIcon);
-        anchor.href = outlink;
-        anchor.target = "_blank";
-        anchor.classList.add("externalLink");
-        timeDiv.append(anchor);
+        eventElement.append(createOutlinkButton(outlink));
 
         events.append(eventElement);
 
@@ -44,3 +37,15 @@ getCalendarRSS().then(xml => {
             events.append(document.createElement("p").innerText = "Oh no! There's no events! :(");
     })
 })
+
+function createOutlinkButton(outlink) {
+    const anchor = document.createElement("a");
+    const outlinkIcon = document.createElement("img");
+    outlinkIcon.src = "../media/external-link.svg"; // There's probably a better way to do this
+    outlinkIcon.alt = "A icon representing an external link.";
+    anchor.append(outlinkIcon);
+    anchor.href = outlink;
+    anchor.target = "_blank";
+    anchor.classList.add("externalLink");
+    return anchor;
+}
