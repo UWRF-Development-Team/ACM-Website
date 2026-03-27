@@ -14,12 +14,12 @@ getCalendarRSS().then(xml => {
     console.log(events);
     events.forEach(event => {
         const embeddedHTML = event.querySelector("description").childNodes[0].data;
-        const list = document.querySelector("#content ul");
-        const listElement = document.createElement("li");
-        listElement.innerHTML = embeddedHTML;
-        const titleElement = listElement.querySelector(".summary");
-        titleElement.innerHTML = `<h1>${titleElement.innerHTML}</h1>`;
-        const timeDiv = listElement.querySelector("div:has( > p > time)");
+        const list = document.querySelector(".events");
+        const eventElement = document.createElement("div");
+        eventElement.innerHTML = embeddedHTML;
+        const titleElement = eventElement.querySelector(".summary");
+        titleElement.innerHTML = `<h3>${titleElement.innerHTML}</h3>`;
+        const timeDiv = eventElement.querySelector("div:has( > p > time)");
         timeDiv.classList.add("timeLocation");
 
         timeDiv.querySelectorAll("time").forEach(element => {
@@ -27,6 +27,6 @@ getCalendarRSS().then(xml => {
             element.innerHTML = `${date.toLocaleString('default', {month: 'long'})} ${date.getDay()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`
         })
 
-        list.append(listElement);
+        list.append(eventElement);
     })
 })
