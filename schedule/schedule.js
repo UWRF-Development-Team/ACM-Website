@@ -11,7 +11,6 @@ getCalendarRSS().then(xml => {
     const parser = new DOMParser();
     const doc = parser.parseFromString(xml, "text/xml");
     const events = doc.querySelectorAll("item");
-    console.log(events);
     events.forEach(event => {
         const outlink = event.querySelector("link").childNodes[0].textContent;
         const embeddedHTML = event.querySelector("description").childNodes[0].textContent;
@@ -29,6 +28,10 @@ getCalendarRSS().then(xml => {
             element.innerHTML = `${date.toLocaleString('default', {month: 'long'})} ${date.getDay()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`
         })
 
+        try {
+            const imageLink = event.querySelector("enclosure").attributes.url.textContent;
+            titleElement.append(createImage(imageLink));
+        } catch {}
         eventElement.append(createOutlinkButton(outlink));
 
         events.append(eventElement);
@@ -37,6 +40,13 @@ getCalendarRSS().then(xml => {
             events.append(document.createElement("p").innerText = "Oh no! There's no events! :(");
     })
 })
+
+function createImage(imageLink) {
+    const imageElement = document.createElement("img");
+    imageElement.src = imageLink;
+    imageElement.alt = "A title image for an event";
+    return imageElement;
+}
 
 function createOutlinkButton(outlink) {
     const anchor = document.createElement("a");
