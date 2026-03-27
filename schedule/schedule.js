@@ -39,5 +39,8 @@ getCalendarRSS().then(xml => {
         timeDiv.append(anchor);
 
         events.append(eventElement);
+
+        if (events.childElementCount === 0)
+            events.append(document.createElement("p").innerText = "Oh no! There's no events! :(");
     })
 })
