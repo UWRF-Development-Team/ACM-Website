@@ -15,19 +15,16 @@ getCalendarRSS().then(xml => {
         const outlink = event.querySelector("link").childNodes[0].textContent;
         const embeddedHTML = event.querySelector("description").childNodes[0].textContent;
         const events = document.querySelector(".events");
+        const eventContainer = document.createElement("div");
         const eventElement = document.createElement("div");
+        eventElement.classList.add("event");
         eventElement.addEventListener("scroll", () => addShadows(eventElement));
         eventElement.innerHTML = embeddedHTML;
         const titleElement = eventElement.querySelector(".summary");
         titleElement.innerHTML = `<h2>${titleElement.innerHTML}</h2>`;
 
-        const timeDiv = eventElement.querySelector("div:has( > p > time)");
-        timeDiv.classList.add("timeLocation");
-
-        timeDiv.querySelectorAll("time").forEach(element => {
-            const date = new Date(element.dateTime);
-            element.innerHTML = `${date.toLocaleString('default', {month: 'long'})} ${date.getDay()}, ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`
-        })
+        const timeHeader = document.createElement("header");
+        timeHeader.innerHTML = `<p>${extractDateLocation(eventElement)}</p>`
 
         try {
             const imageLink = event.querySelector("enclosure").attributes.url.textContent;
@@ -35,13 +32,40 @@ getCalendarRSS().then(xml => {
         } catch {}
         eventElement.append(createOutlinkButton(outlink));
 
-        events.append(eventElement);
+        eventContainer.append(timeHeader);
+        eventContainer.append(eventElement);
+        events.append(eventContainer);
         addShadows(eventElement); // Initial shadows on load
 
         if (events.childElementCount === 0)
             events.append(document.createElement("p").innerText = "Oh no! There's no events! :(");
     })
 })
+
+function extractDateLocation(element) {
+    let output;
+    const timeDiv = element.querySelector("div:has( > p > time)");
+    const locationString = timeDiv.querySelector(".location").textContent;
+
+    const startDate = new Date(timeDiv.querySelector(".dtstart").dateTime);
+    output = dateToString(startDate);
+
+    output += " to ";
+
+    const endDate = new Date(timeDiv.querySelector(".dtend").dateTime);
+    output += dateToString(endDate);
+
+    output += " in " + locationString;
+
+    timeDiv.remove();
+    return output;
+}
+
+function dateToString(date) {
+    return `${date.toLocaleString('default', {month: 'long'})} 
+        ${date.getDay()}, ${date.getFullYear()} at 
+        ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`;
+}
 
 function createImage(imageLink) {
     const imageElement = document.createElement("img");
