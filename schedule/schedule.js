@@ -19,7 +19,7 @@ getCalendarRSS().then(xml => {
         eventElement.addEventListener("scroll", () => addShadows(eventElement));
         eventElement.innerHTML = embeddedHTML;
         const titleElement = eventElement.querySelector(".summary");
-        titleElement.innerHTML = `<h3>${titleElement.innerHTML}</h3>`;
+        titleElement.innerHTML = `<h2>${titleElement.innerHTML}</h2>`;
 
         const timeDiv = eventElement.querySelector("div:has( > p > time)");
         timeDiv.classList.add("timeLocation");
@@ -36,7 +36,7 @@ getCalendarRSS().then(xml => {
         eventElement.append(createOutlinkButton(outlink));
 
         events.append(eventElement);
-        addShadows(eventElement);
+        addShadows(eventElement); // Initial shadows on load
 
         if (events.childElementCount === 0)
             events.append(document.createElement("p").innerText = "Oh no! There's no events! :(");
