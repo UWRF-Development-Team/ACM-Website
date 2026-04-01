@@ -63,7 +63,7 @@ function extractDateLocation(element) {
 
 function dateToString(date) {
     return `${date.toLocaleString('default', {month: 'long'})} 
-        ${date.getDay()}, ${date.getFullYear()} at 
+        ${date.getDate()}, ${date.getFullYear()} at 
         ${date.getHours()}:${date.getMinutes().toString().padStart(2, '0')}`;
 }
 
