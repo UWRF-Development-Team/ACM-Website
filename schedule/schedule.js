@@ -2,7 +2,7 @@ let calendarData;
 
 
 async function getCalendarRSS() {
-    const response = await fetch("https://falconsconnect.uwrf.edu/organization/association-for-computing-machinery/events.rss");
+    const response = await fetch("./sampleCalendar.rss");
     calendarData = await response.text();
     return calendarData;
 }
@@ -32,8 +32,9 @@ getCalendarRSS().then(xml => {
         } catch {}
         eventElement.append(createOutlinkButton(outlink));
 
-        eventContainer.append(timeHeader);
+        
         eventContainer.append(eventElement);
+        titleElement.after(timeHeader);
         events.append(eventContainer);
         addShadows(eventElement); // Initial shadows on load
 
