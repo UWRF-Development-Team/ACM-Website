@@ -2,7 +2,7 @@ let calendarData;
 
 
 async function getCalendarRSS() {
-    const response = await fetch("./sampleCalendar.rss");
+    const response = await fetch("https://falconsconnect.uwrf.edu/organization/association-for-computing-machinery/events.rss");
     calendarData = await response.text();
     return calendarData;
 }
