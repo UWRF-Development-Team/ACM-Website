@@ -1,0 +1,50 @@
+h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.summary > img {
+    width: 30rem;
+}
+
+.event {
+    width: 30rem;
+    height: 30rem;
+    background-color: #d3d3dc;
+    border: 3px solid var(--accent-color);
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+header {
+    font-weight: bold;
+}
+
+.event::-webkit-scrollbar {
+    display: none;
+}
+
+.externalLink img {
+    width: 1.3rem;
+}
+
+.topShadow {
+    box-shadow: inset 0 10px 10px -5px rgb(0, 0, 0, 0.5);
+}
+
+.bottomShadow {
+    box-shadow: inset 0 -10px 10px -5px rgb(0, 0, 0, 0.5);
+}
+
+.bothShadow {
+    box-shadow: inset 0 -10px 10px -5px rgb(0, 0, 0, 0.5), inset 0 10px 10px -5px rgb(0, 0, 0, 0.5);
+}
