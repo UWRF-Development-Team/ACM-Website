@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel><title>University of Wisconsin - River Falls Public Events occurring between Wednesday, April 1, 2026 2:02 PM CDT and Friday, May 1, 2026 2:02 PM CDT</title>
+<description>A listing of public events for University of Wisconsin - River Falls occurring between Wednesday, April 1, 2026 2:02 PM CDT and Friday, May 1, 2026 2:02 PM CDT.</description>
+<language>en-us</language>
+<lastBuildDate>Wed, 01 Apr 2026 19:02:41 GMT</lastBuildDate>
+<category>Public Events</category>
+<generator>Campus Labs Engage</generator>
+<ttl>300</ttl>
+<pubDate>Wed, 01 Apr 2026 19:02:41 GMT</pubDate>
+<link>https://myorgs.uwrf.edu/events</link>
+<item>
+  <title>Project Show-Off Day</title>
+  <guid>https://myorgs.uwrf.edu/event/12388285</guid>
+  <link>https://myorgs.uwrf.edu/event/12388285</link>
+  <enclosure url="https://se-images.campuslabs.com/clink/images/1ac6f13c-bebc-4848-8a08-09f27fc8d45f5b1250cc-9d51-4e03-849c-1c4e75db4fda.png?preset=med-w" length="1" type="image/jpeg" />
+  <description><![CDATA[<div class="h-event vevent">
+  <div class="p-name summary">Project Show-Off Day</div>
+  <div class="p-description description"><p>Do you have a project you've been wanting to show off? Or are you looking for inspiration?</p>
+<p>Come to our personal project show-off day! Here, you can show off a computer-science related project (code, software, hardware, etc.) to others. You can just show your project, and feedback is available from attendees if desired.</p>
+<p>Our faculty advisor should be attending, and as a CIDS professor, they will be able to provide great feedback.</p>
+<p><strong>How does it work?</strong></p>
+<p>Show off a CIDS-related project you created. This can be something you created on your own time, or part of a class/internship. All that matters is that you made it!</p>
+<p>Each person will have up to 15-20 minutes to present their project. You can create a formal presentation if you'd like, but you just need to cover general talking points for your project or run through it. Try to cover high-level concepts of your project, not low-level concepts (e.g. playing through a game, not showing the code).</p>
+<p>Don't worry if your project is small or short! If you can explain your whole project in 1-2 minutes, that's fine!</p>
+<p>If you're presenting software/something digital, please bring a laptop with the project on it that contains a <em>functional HDMI port</em>. If you're unable to do this, please contact an officer ASAP so we can figure out an alternative solution.</p>
+<p>&nbsp;</p>
+<p>We hope to see you there!</p></div>
+  <div>
+    <p>
+      From <time class="dt-start dtstart" datetime="2026-04-06T16:30:00.0000000-05:00" title="2026-04-06T16:30:00.0000000-05:00">Monday, April 6, 2026 4:30 PM</time>
+      to <time class="dt-end dtend" datetime="2026-04-06T18:30:00.0000000-05:00" title="2026-04-06T18:30:00.0000000-05:00">6:30 PM CDT</time>
+      at <span class="p-location location">South Hall 21</span>.
+    </p>
+  </div>
+</div>]]></description>
+  <category>Social</category>
+  <category>Academic/Educational</category>
+  <category>Campus Recreation</category>
+  <pubDate>Wed, 01 Apr 2026 19:02:41 GMT</pubDate>
+  <start xmlns="events">Mon, 06 Apr 2026 21:30:00 GMT</start>
+  <end xmlns="events">Mon, 06 Apr 2026 23:30:00 GMT</end>
+  <location xmlns="events">South Hall 21</location>
+  <status xmlns="events">confirmed</status>
+  <host xmlns="events">Association for Computing Machinery</host>
+</item>
+<item>
+  <title>ACM LAN Party</title>
+  <guid>https://myorgs.uwrf.edu/event/12220905</guid>
+  <link>https://myorgs.uwrf.edu/event/12220905</link>
+  <enclosure url="https://se-images.campuslabs.com/clink/images/4b9fa802-4cb2-461d-807f-26e72dbd9b5d48c1aeca-e1d9-4020-a8e1-e17babad76aa.png?preset=med-w" length="1" type="image/jpeg" />
+  <description><![CDATA[<div class="h-event vevent">
+  <div class="p-name summary">ACM LAN Party</div>
+  <div class="p-description description"><p>For our ACM end-of-semester celebration, experience a classic LAN party like it's 1999. No wireless, no matchmaking, just twisted pairs, switches, and local IPs! We will be having pizza and soda.</p>
+<p>For our games we will be playing some contemporary games such as Quake 3 Arena, as well as Minecraft and whatever else we can think of!</p>
+<p>Come early, come late, or don't! Stay as long as you like!</p>
+<p>&nbsp;</p>
+<p>Requirements:</p>
+<p>- Laptop with USB A, USB C, or an Ethernet port. (We will have mice, don't worry about bringing your own)</p></div>
+  <div>
+    <p>
+      From <time class="dt-start dtstart" datetime="2026-04-27T15:00:00.0000000-05:00" title="2026-04-27T15:00:00.0000000-05:00">Monday, April 27, 2026 3:00 PM</time>
+      to <time class="dt-end dtend" datetime="2026-04-27T19:00:00.0000000-05:00" title="2026-04-27T19:00:00.0000000-05:00">7:00 PM CDT</time>
+      at <span class="p-location location">South Hall 21</span>.
+    </p>
+  </div>
+</div>]]></description>
+  <category>Social</category>
+  <category>Campus Recreation</category>
+  <pubDate>Wed, 01 Apr 2026 19:02:41 GMT</pubDate>
+  <start xmlns="events">Mon, 27 Apr 2026 20:00:00 GMT</start>
+  <end xmlns="events">Tue, 28 Apr 2026 00:00:00 GMT</end>
+  <location xmlns="events">South Hall 21</location>
+  <status xmlns="events">confirmed</status>
+  <host xmlns="events">Association for Computing Machinery</host>
+</item></channel>
+</rss>
